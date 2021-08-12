@@ -8,6 +8,9 @@
 
 The **Storefront Permissions UI** is the interface for the APP [`vtex.storefront-permissions`](https://github.com/vtex-apps/storefront-permissions)
 
+![image](https://user-images.githubusercontent.com/24723/129122444-16069c74-fc7d-4944-9f78-94cd72dbb8ab.png)
+
+
 ## Functionalities
 
 - Manage Roles
