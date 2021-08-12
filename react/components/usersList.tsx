@@ -98,6 +98,7 @@ const Users: FC<any & WrappedComponentProps> = ({ intl }: any) => {
         deleteUser({
           variables: {
             id: rowData.id,
+            email: rowData.email,
             userId: rowData.userId,
           },
         })
@@ -113,7 +114,7 @@ const Users: FC<any & WrappedComponentProps> = ({ intl }: any) => {
         schema={customSchema}
         items={items}
         lineActions={lineActions}
-        onRowClick={({ rowData: { id } }: any) => {
+        onRowClick={({ rowData: { clId: id } }: any) => {
           navigate({
             page: 'admin.app.storefront-permissions.users-edit',
             params: {

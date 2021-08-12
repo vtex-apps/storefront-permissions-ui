@@ -1,8 +1,9 @@
 query ListUsers {
-  listUsers {
+  listUsers @context(provider: "vtex.storefront-permissions"){
     id
     roleId
     userId
+    clId
     name
     email
     canImpersonate

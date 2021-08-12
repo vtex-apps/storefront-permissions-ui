@@ -1,5 +1,5 @@
 query ListProfiles {
-  listProfiles {
+  listProfiles @context(provider: "vtex.storefront-permissions"){
     id
     name
     features {

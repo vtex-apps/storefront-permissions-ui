@@ -1,5 +1,5 @@
 query SearchUsers($perPage: Int!, $pageNumber: Int!, $filter: String) {
-  users(perPage: $perPage, pageNumber: $pageNumber, filter: $filter) {
+  users(perPage: $perPage, pageNumber: $pageNumber, filter: $filter) @context(provider: "vtex.admin-customers-graphql"){
     data {
       id
       email

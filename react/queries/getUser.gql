@@ -1,5 +1,5 @@
 query GetUser($id: ID!) {
-  getUser(id: $id) {
+  getUser(id: $id) @context(provider: "vtex.storefront-permissions"){
     id
     roleId
     userId

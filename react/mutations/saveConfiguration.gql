@@ -5,7 +5,8 @@ mutation save($accountID: String, $clientID: String, $clientSecret: String, $ref
     clientSecret: $clientSecret
     refreshToken: $refreshToken
     submit: $submit
-  ) {
+  ) @context(provider: "vtex.storefront-permissions")
+  {
     status
     message
   }

@@ -1,7 +1,7 @@
 mutation save(
   $id: ID
   $roleId: ID!
-  $userId: ID
+  $userId: ID!
   $canImpersonate: Boolean
   $name: String!
   $email: String!
@@ -13,7 +13,7 @@ mutation save(
     canImpersonate: $canImpersonate
     name: $name
     email: $email
-  ) {
+  )  @context(provider: "vtex.storefront-permissions") {
     id
     status
     message

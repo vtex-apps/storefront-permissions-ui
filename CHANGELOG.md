@@ -6,28 +6,5 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-
-## [1.1.0] - 2021-08-02
-
 ### Added
-- new Graphql query `hasUsers`
-## [1.0.1] - 2021-08-02
-
-### Fixed
-- User search at the admin (Dependency change)
-
-## [1.0.0] - 2021-08-02
-
-### Removed
-- `billingOpstions` from `manifest.json`
-- Option to **Create** and **Delete** roles from the Admin
-
-### Added
-- Roles autosync from dependent Apps
-
-### Changed
-- `checkUserPermission` return structure
-## [0.0.2] - 2021-07-26
-
-### Removed
-- `totalNumberOfUsers` from graqhql query
+- Initial version of the alternative interface for `vtex.storefront-permissions`

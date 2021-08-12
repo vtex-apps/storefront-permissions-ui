@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { FC } from 'react'
 import React, { useState } from 'react'
@@ -40,11 +41,12 @@ const RoleNew: FC<any & WrappedComponentProps> = ({ intl }: any) => {
   const [state, setState] = useState<any>({
     id: null,
     name: null,
+    slug: null,
     features: [],
     toggle: {},
   })
 
-  const { id, name, features, toggle } = state
+  const { id, name, features, toggle, slug } = state
   const {
     loading: loadingFeatures,
     data: dataFeatures,
@@ -83,6 +85,7 @@ const RoleNew: FC<any & WrappedComponentProps> = ({ intl }: any) => {
       variables: {
         id,
         name,
+        slug,
         features,
       },
     })
@@ -143,6 +146,8 @@ const RoleNew: FC<any & WrappedComponentProps> = ({ intl }: any) => {
     return false
   }
 
+  console.log('dataFeatures =>', dataFeatures)
+
   return (
     <div className="w-100 pt6">
       <div className="mb5">
@@ -162,7 +167,7 @@ const RoleNew: FC<any & WrappedComponentProps> = ({ intl }: any) => {
       <div className="mb5">
         {!loadingFeatures &&
           calledFeatures &&
-          !dataFeatures.listFeatures.length && (
+          !dataFeatures?.listFeatures.length && (
             <div>{intl.formatMessage(messages.notFound)}</div>
           )}
 

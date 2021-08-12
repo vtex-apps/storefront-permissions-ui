@@ -1,5 +1,5 @@
-mutation save($id: ID, $name: String!, $features: [FeatureInput]!) {
-  saveRole(id: $id, name: $name, features: $features) {
+mutation save($id: ID, $name: String!, $slug: String, $features: [FeatureInput]!) {
+  saveRole(id: $id, name: $name, slug: $slug, features: $features) @context(provider: "vtex.storefront-permissions"){
     id
     status
     message

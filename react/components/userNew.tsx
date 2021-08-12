@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { FC } from 'react'
 import React, { useState } from 'react'
@@ -53,7 +54,7 @@ let _timeout: any = null
 const UserNew: FC<any & WrappedComponentProps> = ({ intl }) => {
   const { navigate } = useRuntime()
   const [state, setState] = useState<any>({
-    id: null,
+    userId: null,
     roleId: null,
     name: null,
     email: null,
@@ -80,7 +81,7 @@ const UserNew: FC<any & WrappedComponentProps> = ({ intl }) => {
   const handleSaveUser = () => {
     saveUser({
       variables: {
-        id: state.id,
+        userId: state.userId,
         roleId: state.roleId,
         name: state.name,
         email: state.email,
@@ -92,14 +93,14 @@ const UserNew: FC<any & WrappedComponentProps> = ({ intl }) => {
   const options = {
     onSelect: (args: any) => {
       const selectedUser = usersData.users.data.find((user: any) => {
-        return user.id === args.value
+        return user.userId === args.value
       })
 
-      const { id, firstName, lastName, email } = selectedUser
+      const { userId, firstName, lastName, email } = selectedUser
 
       setState({
         ...state,
-        id,
+        userId,
         name: `${firstName} ${lastName}`,
         email,
       })
@@ -108,7 +109,7 @@ const UserNew: FC<any & WrappedComponentProps> = ({ intl }) => {
     value: usersData?.users?.data?.length
       ? usersData.users.data.map((user: any) => {
           return {
-            value: user.id,
+            value: user.userId,
             label: `${user.firstName} ${user.lastName}<${user.email}>`,
           }
         })
@@ -131,47 +132,31 @@ const UserNew: FC<any & WrappedComponentProps> = ({ intl }) => {
         })
       }, 1000)
     },
-    onClear: () => setTerm(''),
+    onClear: () => {
+      setTerm('')
+      setState({
+        ...state,
+        userId: null,
+        name: null,
+        email: null,
+      })
+    },
     placeholder: 'Search user... (e.g.: Ana)',
     value: term,
   }
+
+  console.log('State =>', state)
 
   return (
     <div className="w-100 pt6">
       <div className="mb5">
         <AutocompleteInput input={input} options={options} />
       </div>
-      {!!state.id && (
+      {!!state.userId && (
         <>
-          <div className="mb5">
-            <Input
-              label={intl.formatMessage(messages.name)}
-              value={state.name}
-              readOnly={!!state.id}
-              errorMessage={
-                state.name === '' ? intl.formatMessage(messages.required) : ''
-              }
-              disabled={loadingRoles || saveUserLoading}
-              onChange={(e: any) => {
-                setState({ ...state, name: e.target.value })
-              }}
-            />
-          </div>
+          <div className="mb5">{state.name}</div>
 
-          <div className="mb5">
-            <Input
-              label={intl.formatMessage(messages.email)}
-              value={state.email}
-              readOnly={!!state.id}
-              errorMessage={
-                state.email === '' ? intl.formatMessage(messages.required) : ''
-              }
-              disabled={loadingRoles || saveUserLoading}
-              onChange={(e: any) => {
-                setState({ ...state, email: e.target.value })
-              }}
-            />
-          </div>
+          <div className="mb5">{state.email}</div>
           <div className="mb5">
             <Dropdown
               label={intl.formatMessage(messages.role)}
@@ -216,12 +201,10 @@ const UserNew: FC<any & WrappedComponentProps> = ({ intl }) => {
         >
           {intl.formatMessage(messages.cancel)}
         </Button>
-        {!!state.id && (
+        {!!state.userId && (
           <Button
             variation="primary"
-            disabled={
-              loadingRoles || saveUserLoading || !state.name || !state.email
-            }
+            disabled={loadingRoles || saveUserLoading}
             collapseRight
             onClick={() => {
               handleSaveUser()
