@@ -254,14 +254,6 @@ typescript@3.9.7:
   version "8.131.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.131.0/public/@types/vtex.render-runtime#dcc88828e3d65ecb4e7538a3623a4b1ddd77e034"
 
-"vtex.storefront-permissions-ui@https://wender--sandboxusdev.myvtex.com/_v/private/typings/linked/v1/vtex.storefront-permissions-ui@0.0.0+build1628720085/public/@types/vtex.storefront-permissions-ui":
-  version "0.0.0"
-  resolved "https://wender--sandboxusdev.myvtex.com/_v/private/typings/linked/v1/vtex.storefront-permissions-ui@0.0.0+build1628720085/public/@types/vtex.storefront-permissions-ui#682ad8dcf13aadf6ce6c4e16e65ddc80d097af57"
-
-"vtex.storefront-permissions@https://wender--sandboxusdev.myvtex.com/_v/private/typings/linked/v1/vtex.storefront-permissions@1.2.0+build1628727565/public/@types/vtex.storefront-permissions":
-  version "1.2.0"
-  resolved "https://wender--sandboxusdev.myvtex.com/_v/private/typings/linked/v1/vtex.storefront-permissions@1.2.0+build1628727565/public/@types/vtex.storefront-permissions#2e9a2a57fc46eb51d1edefe5ae65913d84170955"
-
 "vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.145.0/public/@types/vtex.styleguide":
   version "9.145.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.145.0/public/@types/vtex.styleguide#41dfb32af8756eb5528dbd452e47003a8f67fe8c"
