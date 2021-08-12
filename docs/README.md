@@ -1,4 +1,4 @@
-# B2B Waffle
+# Storefront Permissions UI
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
