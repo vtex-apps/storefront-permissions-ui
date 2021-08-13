@@ -1,0 +1,16 @@
+{
+  "check-permission": {
+    "component": "CheckPermission",
+    "allowed": ["allowed-content", "disallowed-content"]
+  },
+  "allowed-content": {
+    "component": "BlockContent",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "disallowed-content": {
+    "component": "BlockContent",
+    "composition": "children",
+    "allowed": "*"
+  }
+}

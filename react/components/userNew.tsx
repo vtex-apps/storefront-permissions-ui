@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { FC } from 'react'
 import React, { useState } from 'react'
@@ -144,8 +143,6 @@ const UserNew: FC<any & WrappedComponentProps> = ({ intl }) => {
     placeholder: 'Search user... (e.g.: Ana)',
     value: term,
   }
-
-  console.log('State =>', state)
 
   return (
     <div className="w-100 pt6">

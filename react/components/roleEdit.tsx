@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { FC } from 'react'
 import React, { useState } from 'react'
@@ -145,8 +144,6 @@ const RoleNew: FC<any & WrappedComponentProps> = ({ intl }: any) => {
 
     return false
   }
-
-  console.log('dataFeatures =>', dataFeatures)
 
   return (
     <div className="w-100 pt6">
