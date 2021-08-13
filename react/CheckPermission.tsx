@@ -20,13 +20,16 @@ function CheckPermission({
     skip: !roles.length
   })
 
-  if(!roles.length && called && loading || error) {
+  if (!roles.length || !data) {
+    return null
+  }
+
+  if(called && loading || error) {
     if(error !== undefined) {console.error('CheckPermission error:', error)}
     return null
   } else {
 
     let hasPermission = roles?.length ? roles.indexOf(data.checkUserPermission.role.slug) !== -1 : true
-
 
     if (hasPermission) {
       return AllowedContent ? (
