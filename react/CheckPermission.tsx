@@ -20,6 +20,8 @@ function CheckPermission({
     skip: !roles.length
   })
 
+  console.log('getPermissions =>', {data, called, error, loading})
+
   if (!roles.length || !data) {
     return null
   }
@@ -29,7 +31,8 @@ function CheckPermission({
     return null
   } else {
 
-    let hasPermission = roles?.length ? roles.indexOf(data.checkUserPermission.role.slug) !== -1 : true
+
+    let hasPermission = roles?.length ? roles.indexOf(data?.checkUserPermission?.role?.slug) !== -1 : false
 
     if (hasPermission) {
       return AllowedContent ? (
