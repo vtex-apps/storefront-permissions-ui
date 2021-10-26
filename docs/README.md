@@ -102,6 +102,6 @@ Only `check-permission` block has props:
 | Sales Admin          | `sales-admin`          |
 | Sales Manager        | `sales-manager`        |
 | Sales Representative | `sales-representative` |
-| Admin       | `customer-admin`       |
-| Approver    | `customer-approver`    |
-| Buyer       | `customer-buyer`       |
+| Organization Admin       | `customer-admin`       |
+| Organization Approver    | `customer-approver`    |
+| Organization Buyer       | `customer-buyer`       |

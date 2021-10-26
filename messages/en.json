@@ -2,7 +2,7 @@
   "admin/storefront-permissions.navigation.label": "Storefront Permissions",
   "admin/storefront-permissions.navigation.keywords": "b2b, Roles, Profiles",
   "admin/storefront-permissions.title": "Storefront Permissions",
-  "admin/storefront-permissions.description": "Roles and User management",
+  "admin/storefront-permissions.description": "Roles management",
   "admin/storefront-permissions.required": "Required",
   "admin/storefront-permissions.tab.new.button": "New",
   "admin/storefront-permissions.button.save": "Save",
