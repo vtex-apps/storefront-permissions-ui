@@ -8,8 +8,7 @@
 
 The **Storefront Permissions UI** is the interface for the APP [`vtex.storefront-permissions`](https://github.com/vtex-apps/storefront-permissions)
 
-![image](https://user-images.githubusercontent.com/24723/129122444-16069c74-fc7d-4944-9f78-94cd72dbb8ab.png)
-
+![image](https://user-images.githubusercontent.com/24723/138930342-0b32937f-120b-49c9-9d3b-a20e350450a1.png)
 
 ## Functionalities
 
@@ -102,6 +101,6 @@ Only `check-permission` block has props:
 | Sales Admin          | `sales-admin`          |
 | Sales Manager        | `sales-manager`        |
 | Sales Representative | `sales-representative` |
-| Admin       | `customer-admin`       |
-| Approver    | `customer-approver`    |
-| Buyer       | `customer-buyer`       |
+| Organization Admin       | `customer-admin`       |
+| Organization Approver    | `customer-approver`    |
+| Organization Buyer       | `customer-buyer`       |
