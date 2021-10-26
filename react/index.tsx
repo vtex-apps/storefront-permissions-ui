@@ -11,7 +11,9 @@ import GET_CONFIG from './queries/getAppSettings.gql'
 
 const AdminB2bWaffle: FC<InjectedIntlProps> = (props) => {
   const { navigate, route } = useRuntime()
-  const [activeTab, setActiveTab] = useState(route.id)
+
+  console.log('route', route)
+  const [activeTab, setActiveTab] = useState('admin.app.storefront-permissions.roles-list')
   const [state, setState] = useState<any>({
     missingConfig: true,
   })
@@ -34,10 +36,11 @@ const AdminB2bWaffle: FC<InjectedIntlProps> = (props) => {
 
   const isActive = (currTab: string) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
     const [_, current] = activeTab.split('admin.app.storefront-permissions')
     const [section] = current.replace('.', '').split('-')
-
-    return currTab === (section || 'users')
+    console.log('isActive', currTab, currTab === (section || 'roles'))
+    return currTab === (section || 'roles')
   }
 
   return (
@@ -53,24 +56,6 @@ const AdminB2bWaffle: FC<InjectedIntlProps> = (props) => {
     >
       <PageBlock>
         <>
-          <Tabs fullWidth>
-            <Tab
-              label={
-                <FormattedMessage id="admin/storefront-permissions.tab.users" />
-              }
-              active={isActive('users')}
-              onClick={setActiveSection('users')}
-              disabled={loading}
-            ></Tab>
-            <Tab
-              label={
-                <FormattedMessage id="admin/storefront-permissions.tab.roles" />
-              }
-              active={isActive('roles')}
-              onClick={setActiveSection('roles')}
-              disabled={loading}
-            ></Tab>
-          </Tabs>
           {props.children}
         </>
       </PageBlock>
