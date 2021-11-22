@@ -1,6 +1,6 @@
 {
   "section": "accountSettings",
-  "path": "/admin/app/storefront-permissions/roles/list",
+  "path": "/admin/storefront-permissions/roles/list",
   "icon": "extensions-ic",
   "titleId": "admin/storefront-permissions.navigation.label",
   "searchKeyWordsHelpers": "admin/storefront-permissions.navigation.keywords"
