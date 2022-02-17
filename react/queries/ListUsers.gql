@@ -1,5 +1,5 @@
 query ListUsers {
-  listUsers @context(provider: "vtex.storefront-permissions"){
+  listUsers @context(provider: "vtex.storefront-permissions") {
     id
     roleId
     userId

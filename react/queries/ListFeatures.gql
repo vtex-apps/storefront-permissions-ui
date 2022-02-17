@@ -1,5 +1,5 @@
 query ListFeatures {
-  listFeatures @context(provider: "vtex.storefront-permissions"){
+  listFeatures @context(provider: "vtex.storefront-permissions") {
     module
     name
     features {

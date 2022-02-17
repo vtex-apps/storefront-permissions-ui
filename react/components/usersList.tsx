@@ -54,7 +54,7 @@ const Users: FC<any & WrappedComponentProps> = ({ intl }: any) => {
   const { navigate, route } = useRuntime()
 
   navigate({
-    page: 'admin.app.storefront-permissions.roles-list'
+    page: 'admin.app.storefront-permissions.roles-list',
   })
 
   const { params } = route

@@ -12,11 +12,7 @@ interface Props {
 function BlockContent({ children, classes }: PropsWithChildren<Props>) {
   const { handles } = useCssHandles(CSS_HANDLES, { classes })
 
-  return (
-    <div className={`${handles.checkPermissionsBlock}`}>
-      {children}
-    </div>
-  )
+  return <div className={`${handles.checkPermissionsBlock}`}>{children}</div>
 }
 
 export default BlockContent

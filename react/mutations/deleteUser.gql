@@ -1,5 +1,6 @@
 mutation delete($id: ID!, $email: String!, $userId: ID) {
-  deleteUser(id: $id, email: $email, userId: $userId) @context(provider: "vtex.storefront-permissions"){
+  deleteUser(id: $id, email: $email, userId: $userId)
+    @context(provider: "vtex.storefront-permissions") {
     status
     message
   }

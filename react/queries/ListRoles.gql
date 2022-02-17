@@ -1,5 +1,5 @@
 query ListRoles {
-  listRoles @context(provider: "vtex.storefront-permissions"){
+  listRoles @context(provider: "vtex.storefront-permissions") {
     id
     name
   }
