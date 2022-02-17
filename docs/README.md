@@ -25,11 +25,11 @@ The **Storefront Permissions UI** is the interface for the APP [`vtex.storefront
 
 ### Theme configuration
 
-To make use of the conditional blocks, you need to add `vtex.storefront-permissions-ui@0.x` under `peerDependencies` on the `manifest.json`
+To make use of the conditional blocks, you need to add `vtex.storefront-permissions-ui@1.x` under `dependencies` on the `manifest.json`
 
 ```diff
-  "peerDependencies": {
-+   "vtex.storefront-permissions-ui": "0.x"
+  "dependencies": {
++   "vtex.storefront-permissions-ui": "1.x"
   },
 ```
 
@@ -89,18 +89,18 @@ Now, you can make use of the interfaces `check-permission`, `allowed-content` an
 
 Only `check-permission` block has props:
 
-| Prop name       | Type      | Description                                         | Required | Example |
-| --------------- | --------- | --------------------------------------------------- | -------- | ------- |
-| `roles`          | `array of string`  | List of the allowed roles.                |  `true`  | ["store-admin", "sales-admin"] |
+| Prop name | Type              | Description                | Required | Example                        |
+| --------- | ----------------- | -------------------------- | -------- | ------------------------------ |
+| `roles`   | `array of string` | List of the allowed roles. | `true`   | ["store-admin", "sales-admin"] |
 
 ### Available Roles
 
-| Role                 | Key                    |
-| -------------------- | ---------------------- |
-| Store Admin          | `store-admin`          |
-| Sales Admin          | `sales-admin`          |
-| Sales Manager        | `sales-manager`        |
-| Sales Representative | `sales-representative` |
-| Organization Admin       | `customer-admin`       |
-| Organization Approver    | `customer-approver`    |
-| Organization Buyer       | `customer-buyer`       |
+| Role                  | Key                    |
+| --------------------- | ---------------------- |
+| Store Admin           | `store-admin`          |
+| Sales Admin           | `sales-admin`          |
+| Sales Manager         | `sales-manager`        |
+| Sales Representative  | `sales-representative` |
+| Organization Admin    | `customer-admin`       |
+| Organization Approver | `customer-approver`    |
+| Organization Buyer    | `customer-buyer`       |
