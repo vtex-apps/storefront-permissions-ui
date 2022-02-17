@@ -5,13 +5,7 @@ import type { WrappedComponentProps } from 'react-intl'
 import { injectIntl, defineMessages } from 'react-intl'
 import { useQuery, useMutation, useLazyQuery } from 'react-apollo'
 import { useRuntime } from 'vtex.render-runtime'
-import {
-  Input,
-  Button,
-  Dropdown,
-  Toggle,
-  AutocompleteInput,
-} from 'vtex.styleguide'
+import { Button, Dropdown, Toggle, AutocompleteInput } from 'vtex.styleguide'
 
 import GET_ROLES from '../queries/ListRoles.gql'
 import SEARCH_USERS from '../queries/SearchUsers.gql'

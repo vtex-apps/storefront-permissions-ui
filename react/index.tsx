@@ -1,20 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { FC } from 'react'
 import React, { useState } from 'react'
-import type { InjectedIntlProps } from 'react-intl'
+import type { WrappedComponentProps } from 'react-intl'
 import { FormattedMessage, injectIntl } from 'react-intl'
 import { useQuery } from 'react-apollo'
-import { Layout, PageBlock, PageHeader} from 'vtex.styleguide'
+import { Layout, PageBlock, PageHeader } from 'vtex.styleguide'
 
 import GET_CONFIG from './queries/getAppSettings.gql'
 
-const AdminB2bWaffle: FC<InjectedIntlProps> = (props) => {
-
+const AdminB2bWaffle: FC<WrappedComponentProps> = (props) => {
   const [state, setState] = useState<any>({
     missingConfig: true,
   })
 
-  const { loading } = useQuery(GET_CONFIG, {
+  useQuery(GET_CONFIG, {
     onCompleted: (res: any) => {
       setState({
         ...state,
@@ -22,7 +21,6 @@ const AdminB2bWaffle: FC<InjectedIntlProps> = (props) => {
       })
     },
   })
-
 
   return (
     <Layout
@@ -36,9 +34,7 @@ const AdminB2bWaffle: FC<InjectedIntlProps> = (props) => {
       }
     >
       <PageBlock>
-        <>
-          {props.children}
-        </>
+        <>{props.children}</>
       </PageBlock>
     </Layout>
   )

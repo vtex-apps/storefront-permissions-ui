@@ -1,5 +1,5 @@
 mutation delete($id: ID!) {
-  deleteRole(id: $id) @context(provider: "vtex.storefront-permissions"){
+  deleteRole(id: $id) @context(provider: "vtex.storefront-permissions") {
     status
     message
   }

@@ -13,7 +13,7 @@ mutation save(
     canImpersonate: $canImpersonate
     name: $name
     email: $email
-  )  @context(provider: "vtex.storefront-permissions") {
+  ) @context(provider: "vtex.storefront-permissions") {
     id
     status
     message
