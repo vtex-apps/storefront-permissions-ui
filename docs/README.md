@@ -47,7 +47,7 @@ To manage roles and their respective app permissions using the Storefront Permis
 
 ![storefront-permissions-ui](https://raw.githubusercontent.com/vtex-apps/storefront-permissions-ui/documentation-update/docs/images/storefront-permissions-ui.gif)
 
-After associating roles with the desired permissions, you need to give each user a role. To learn more about this, read our [B2B Organizations documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#users).
+After associating roles with the desired permissions, you may then assign roles to users. To learn more about this, read our [B2B Organizations documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#users).
 
 
 ### Available storefront roles
