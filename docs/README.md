@@ -105,7 +105,7 @@ If you are experienced in developing and customizing your store’s theme, follo
 
 In the example below, in a store’s home, a carousel with banners will only be visible to logged in users with the `store-admin` or `sales-admin` roles. Users with other roles will see a warning message (`**You don't have access to this content**`) instead.
 
-```json
+```diff
 {
   "store.home": {
     "blocks": [
