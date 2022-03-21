@@ -22,8 +22,6 @@ We recommend that you use it alongside the other apps in the [B2B Suite](https:/
 
 Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
 
-You must also have installed the [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) app to use the **Storefront Permissions UI**.
-
 
 ## Installation
 
@@ -31,6 +29,7 @@ You can install the app by running `vtex install vtex.storefront-permissions-ui`
 
 After this command, the app will be installed in your VTEX Admin, and you can access it on **Account Settings** > **Storefront Permissions**.
 
+> ℹ Installing **Storefront Permissions UI** has the effect of automatically installing the [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) app as a dependency, in case it is not already installed.
 
 ## Roles management
 
