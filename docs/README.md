@@ -6,40 +6,109 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-The **Storefront Permissions UI** is the interface for the APP [`vtex.storefront-permissions`](https://github.com/vtex-apps/storefront-permissions)
+**Storefront Permissions UI** provides an interface for the [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) app, which is part of VTEX’s [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships.
 
-![image](https://user-images.githubusercontent.com/24723/138930342-0b32937f-120b-49c9-9d3b-a20e350450a1.png)
+B2B customers often play distinct roles within their organization, such as professional buyer, manager, or supervisor. Each role is associated with a different set of permissions, depending on the actions the user needs to perform.
 
-## Functionalities
+This app communicates with the backstage **Storefront Permissions** app and provides the following features for this scenario:
 
-- Manage Roles
-- Manage Users
-- Manage theme blocks depending on user's role
+* [Roles management](#roles-management): allow VTEX Admin users to manage B2B roles and associated app permissions through an interface.
+* [Theme blocks configuration](#theme-blocks-configuration): enable conditional theme blocks so that only users with the required permissions can access determined parts of the content in your storefront.
 
-## Configuration
+We recommend that you use it alongside the other apps in the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) for all functionalities to work as expected.
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the storefront-permissions app by running `vtex install vtex.storefront-permissions-ui` in your terminal.
-2. At the Admin, navigate to **ACCOUNT SETTINGS > Storefront Permissions**.
 
-3. Create Users
+## Before you start
 
-### Theme configuration
+Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
 
-To make use of the conditional blocks, you need to add `vtex.storefront-permissions-ui@1.x` under `dependencies` on the `manifest.json`
 
-```diff
-  "dependencies": {
-+   "vtex.storefront-permissions-ui": "1.x"
-  },
-```
+## Installation
 
-Now, you can make use of the interfaces `check-permission`, `allowed-content` and `disallowed-content` as the example bellow
+You can install the app by running `vtex install vtex.storefront-permissions-ui` in your terminal, using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+
+After this command, the app will be installed in your VTEX Admin, and you can access it on **Account Settings** > **Storefront Permissions**.
+
+> ℹ Installing **Storefront Permissions UI** has the effect of automatically installing the [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) app as a dependency, in case it is not already installed.
+
+## Roles management
+
+To manage roles and their respective app permissions using the Storefront Permissions UI, follow the steps below after installing the app.
+
+1. At the VTEX Admin, navigate to **Account Settings** > **Storefront Permissions**.
+2. Click on one of the [available storefront roles](#available-storefront-roles).
+3. Click on one of the listed apps.
+
+    > ℹ Only apps that are integrated with **Storefront Permissions** will be on the list – check our [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions#advanced-app-integration-optional) documentation for more information.
+
+4. Select which permissions you want to enable for the role, as illustrated below.
+5. Once you are done, click on `Save`.
+
+![storefront-permissions-ui](https://raw.githubusercontent.com/vtex-apps/storefront-permissions-ui/documentation-update/docs/images/storefront-permissions-ui.gif)
+
+After associating roles with the desired permissions, you may then assign roles to users. To learn more about this, read our [B2B Organizations documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#users).
+
+
+### Available storefront roles
+
+In the following table, you can see the available storefront roles, their key used for identification in the app’s code, and their description.
+
+
+| **Role** | **Key** | **Description** |
+|---|---|---|
+| Store Admin | `store-admin` | Store administrator, that is, a user who has access to the VTEX Admin. |
+| Sales Admin | `sales-admin` | Sales administrator user who can manage all sales users. |
+| Sales Manager | `sales-manager` | Sales manager user who can manage sales users in the same organization, as well as assist or impersonate buyers during navigation or purchase. |
+| Sales Representative | `sales-representative` | Sales representative user who can assist or impersonate buyers in the same cost center during navigation or purchase.  |
+| Organization Admin | `customer-admin` | Main organization user who manages the organization information, as well as its members and cost centers. |
+| Organization Approver | `customer-approver` | Organization user who can take a saved cart or quote that was created by an **Organization Buyer** and use it to place an order. |
+| Organization Buyer | `customer-buyer` | Organization user who has the ability to add items to cart. If the **B2B Quotes** app is installed, they are also able to save their cart for future use or create a quote. |
+
+
+## Theme blocks configuration
+
+If you only want users with roles that have the required permissions to be able to access determined parts of the content in your storefront, you can also configure conditional blocks in your store’s theme. These types of blocks allow you to validate information in order to display or hide content in your storefront.
+
+In case you need more information on how to start building your own theme, read our [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-1-basicsetup) before you proceed.
+
+If you are experienced in developing and customizing your store’s theme, follow the steps below to declare the conditional blocks enabled by **Storefront Permissions UI**.
+
+1. Open your store theme app’s repository in your local files.
+2. In the `manifest.json` file, under `dependencies`, add `"vtex.storefront-permissions-ui": "1.x"`, like in the example below.
+
+    ```json
+     "dependencies": {
+       "vtex.storefront-permissions-ui": "1.x"
+      },
+    ```
+
+3. Now, you can use the `check-permission`, `allowed-content` and `disallowed-content` blocks on any files you want in your store’s theme. See more information on these blocks below.
+
+    | **Block name** | **Description** |  |
+    |---|---|---|
+    | `check-permission` | Checks if the current user has the required permissions to access the content wrapped with this block.<br>You can wrap content blocks with check-permission when declaring them to validate if the user has the required permissions to see that content. Example: `check-permission#carousel` |  |
+    | `allowed-content` | Allows you to define on children blocks the content that will be shown for allowed users – users with roles that have the required permissions to view the block. |  |
+    | `disallowed-content` | Optional block that allows you to define on children blocks the content that will be shown for disallowed users – users with roles that do not have the required permissions to view the block. |  |
+    
+
+    This component will check if the user has permission to see the `allowed-content`, otherwise they will see the `disallowed-content`.
+    
+    The `check-permission` block has a prop named `roles`, which lets you define an array of roles that are allowed to see the blocks defined under the children blocks of `allowed-content`.
+    
+    | **Prop name** | **Type** | **Description** | **Required** | **Example** |
+    |---|---|---|---|---|
+    | `roles` | array of strings | List of the allowed roles, identified by their key. Learn more about each role and its key in the [Available storefront roles](#available-storefront-roles) section. | true | `["store-admin", "sales-admin"]` |
+
+
+#### Example
+
+In the example below, in a store’s home, a carousel with banners will only be visible to logged in users with the `store-admin` or `sales-admin` roles. Users with other roles will see a warning message (`**You don't have access to this content**`) instead.
 
 ```diff
 {
   "store.home": {
     "blocks": [
-+      "check-permission#carousel",
++     "check-permission#carousel",
       "shelf#home",
       "info-card#home",
       "rich-text#question",
@@ -82,25 +151,3 @@ Now, you can make use of the interfaces `check-permission`, `allowed-content` an
     }
   },
 ```
-
-`check-permission` have a `props` **roles** which you can define an array of allowed roles to see the blocks defined under the children blocks of `allowed-content` you can also define the optional `disallowed-content` to show an alternative content to not allowed users
-
-#### Props
-
-Only `check-permission` block has props:
-
-| Prop name | Type              | Description                | Required | Example                        |
-| --------- | ----------------- | -------------------------- | -------- | ------------------------------ |
-| `roles`   | `array of string` | List of the allowed roles. | `true`   | ["store-admin", "sales-admin"] |
-
-### Available Roles
-
-| Role                  | Key                    |
-| --------------------- | ---------------------- |
-| Store Admin           | `store-admin`          |
-| Sales Admin           | `sales-admin`          |
-| Sales Manager         | `sales-manager`        |
-| Sales Representative  | `sales-representative` |
-| Organization Admin    | `customer-admin`       |
-| Organization Approver | `customer-approver`    |
-| Organization Buyer    | `customer-buyer`       |

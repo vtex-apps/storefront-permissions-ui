@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Updated README.md file
+
+### Removed
+
+- Credentials_LS.png, Defaults_LS.png, Flowchart_LS.png and Options_LS.png files in the docs/images folder
+
+### Added
+
+- storefront-permissions-ui.gif file in the docs/images folder
+
+
 ## [1.0.0] - 2022-02-17
 
 ### Changed
