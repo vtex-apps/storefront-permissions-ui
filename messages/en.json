@@ -20,6 +20,6 @@
   "admin/storefront-permissions.tab.users.name.label": "Name",
   "admin/storefront-permissions.tab.users.success": "B2B info saved",
   "admin/storefront-permissions.title": "Storefront Permissions",
-  "admin/storefront-permissions.alert-pick": "You need to pick a cost center before saving changes",
+  "admin/storefront-permissions.alert-pick": "You need to choose a cost center before saving changes",
   "admin/storefront-permissions.searchOrganizations": "Search organizations..."
 }
