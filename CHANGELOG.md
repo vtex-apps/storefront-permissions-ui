@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- minimist package updated from 1.2.5 to 1.2.7 due a critical security vulnerability
+
+
 ### Changed
 
 - Split bindings testcase into two files
