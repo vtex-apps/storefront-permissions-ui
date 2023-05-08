@@ -23,17 +23,15 @@ function CheckPermission({
     skip: !roles.length,
   })
 
-  if (!roles.length || !data) {
-    return null
+  if (!roles.length || !data || (called && loading)) {
+    return LoadingContent
+      ? <LoadingContent />
+      : <ExtensionPoint id="loading-content" />
   }
 
   if (error !== undefined) {
     console.error('CheckPermission error:', error)
     return null
-  }
-
-  if (called && loading) {
-    return LoadingContent ? <LoadingContent /> : null
   }
 
   const hasPermission = roles?.length
