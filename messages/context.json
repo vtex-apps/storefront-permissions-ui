@@ -13,6 +13,22 @@
   "admin/storefront-permissions.tab.users.name.label": "admin/storefront-permissions.tab.users.name.label",
   "admin/storefront-permissions.tab.users.canImpersonate.label": "admin/storefront-permissions.tab.users.canImpersonate.label",
   "admin/storefront-permissions.tab.roles.name.label": "admin/storefront-permissions.tab.roles.name.label",
+  "admin/storefront-permissions.tab.roles.category.label": "admin/storefront-permissions.tab.roles.category.label",
   "admin/storefront-permissions.tab.roles": "admin/storefront-permissions.tab.roles",
-  "admin/storefront-permissions.tab.roles.featuresNotFound": "admin/storefront-permissions.tab.roles.featuresNotFound"
+  "admin/storefront-permissions.tab.roles.featuresNotFound": "admin/storefront-permissions.tab.roles.featuresNotFound",
+  "admin/storefront-permissions.help.title": "admin/storefront-permissions.help.title",
+  "admin/storefront-permissions.help.text1": "admin/storefront-permissions.help.text1",
+  "admin/storefront-permissions.help.text2": "admin/storefront-permissions.help.text2",
+  "admin/storefront-permissions.help.category1": "admin/storefront-permissions.help.category1",
+  "admin/storefront-permissions.help.category1.text1": "admin/storefront-permissions.help.category1.text1",
+  "admin/storefront-permissions.help.category2": "admin/storefront-permissions.help.category2",
+  "admin/storefront-permissions.help.category2.text1": "admin/storefront-permissions.help.category2.text1",
+  "admin/storefront-permissions.help.category2.text2": "admin/storefront-permissions.help.category2.text2",
+  "admin/storefront-permissions.help.category2.text3": "admin/storefront-permissions.help.category2.text3",
+  "admin/storefront-permissions.help.category2.text4": "admin/storefront-permissions.help.category2.text4",
+  "admin/storefront-permissions.help.category2.text5": "admin/storefront-permissions.help.category2.text5",
+  "admin/storefront-permissions.help.category3": "admin/storefront-permissions.help.category3",
+  "admin/storefront-permissions.help.category3.text1": "admin/storefront-permissions.help.category3.text1",
+  "admin/storefront-permissions.help.category3.text2": "admin/storefront-permissions.help.category3.text2",
+  "admin/storefront-permissions.help.category3.text3": "admin/storefront-permissions.help.category3.text3"
 }
