@@ -52,7 +52,8 @@ const messages = defineMessages({
   },
   category2Text1: {
     id: 'admin/storefront-permissions.help.category2.text1',
-    defaultMessage: 'Can manage quotations, sales, and users from the its Organization.',
+    defaultMessage:
+      'Can manage quotations, sales, and users from the its Organization.',
   },
   category2Text2: {
     id: 'admin/storefront-permissions.help.category2.text2',
@@ -68,7 +69,8 @@ const messages = defineMessages({
   },
   category2Text5: {
     id: 'admin/storefront-permissions.help.category2.text5',
-    defaultMessage: 'Sales user hierarchy: sales-admin > sales-manager > sales-representative',
+    defaultMessage:
+      'Sales user hierarchy: sales-admin > sales-manager > sales-representative',
   },
   category3: {
     id: 'admin/storefront-permissions.help.category3',
@@ -80,11 +82,13 @@ const messages = defineMessages({
   },
   category3Text2: {
     id: 'admin/storefront-permissions.help.category3.text2',
-    defaultMessage: 'Customers users can only manage users under the Customers roles.',
+    defaultMessage:
+      'Customers users can only manage users under the Customers roles.',
   },
   category3Text3: {
     id: 'admin/storefront-permissions.help.category3.text3',
-    defaultMessage: 'Customers users hierarchy: customer-amin > customer-approver > customer-buyer',
+    defaultMessage:
+      'Customers users hierarchy: customer-amin > customer-approver > customer-buyer',
   },
 })
 
@@ -108,7 +112,7 @@ const Roles: FC<any & WrappedComponentProps> = ({ intl }: any) => {
       },
       slug: {
         title: intl.formatMessage(messages.slug),
-      }
+      },
     },
   }
 
@@ -146,17 +150,19 @@ const Roles: FC<any & WrappedComponentProps> = ({ intl }: any) => {
           })
         }}
       />
-      <div className='mt6'>
+      <div className="mt6">
         <Card>
           <h3>{intl.formatMessage(messages.helpTitle)}</h3>
+          <p>{intl.formatMessage(messages.helpText1)}</p>
           <p>
-            {intl.formatMessage(messages.helpText1)}
-          </p>
-          <p>
-          {intl.formatMessage(messages.helpText2)}
+            {intl.formatMessage(messages.helpText2)}
             <ul>
-              <li><strong>{intl.formatMessage(messages.category1)}</strong>: {intl.formatMessage(messages.category1Text1)}</li>
-              <li><strong>{intl.formatMessage(messages.category2)}</strong>:
+              <li>
+                <strong>{intl.formatMessage(messages.category1)}</strong>:{' '}
+                {intl.formatMessage(messages.category1Text1)}
+              </li>
+              <li>
+                <strong>{intl.formatMessage(messages.category2)}</strong>:
                 <ul>
                   <li>{intl.formatMessage(messages.category2Text1)}</li>
                   <li>{intl.formatMessage(messages.category2Text2)}</li>
@@ -165,7 +171,8 @@ const Roles: FC<any & WrappedComponentProps> = ({ intl }: any) => {
                   <li>{intl.formatMessage(messages.category2Text5)}</li>
                 </ul>
               </li>
-              <li><strong>{intl.formatMessage(messages.category3)}</strong>:
+              <li>
+                <strong>{intl.formatMessage(messages.category3)}</strong>:
                 <ul>
                   <li>{intl.formatMessage(messages.category3Text1)}</li>
                   <li>{intl.formatMessage(messages.category3Text2)}</li>
