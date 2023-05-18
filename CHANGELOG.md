@@ -10,6 +10,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Better communication on the roles categorization
 
+### Removed
+- [ENGINEERS-1247] - Disable cypress tests in PR level
+
+## [1.1.1] - 2022-11-14
+
+### Changed
+
+- Run schedule job only on saturday
+
+### Changed
+
+- [ ENGINEERS-975 ] - Cypress improvements
+
+### Fixed
+
+- minimist package updated from 1.2.5 to 1.2.7 due a critical security vulnerability
+
+
+### Changed
+
+- Split bindings testcase into two files
+
+### Changed
 
 ## [1.1.0] - 2022-07-12
 
