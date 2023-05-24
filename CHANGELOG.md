@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Possible loading content while permissions are loaded.
 
+## [1.2.0] - 2023-05-18
+
+### Added
+- Better communication on the roles categorization
+
 ### Removed
 - [ENGINEERS-1247] - Disable cypress tests in PR level
 
@@ -33,8 +38,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Split bindings testcase into two files
 
 ### Changed
-
-- GitHub reusable workflow and Cy-Runner uptade to version 2
 
 ## [1.1.0] - 2022-07-12
 
