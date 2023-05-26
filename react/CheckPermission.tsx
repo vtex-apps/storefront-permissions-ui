@@ -9,27 +9,35 @@ interface Props {
   roles: string[]
   AllowedContent?: ElementType
   DisallowedContent?: ElementType
+  LoadingContent?: ElementType
 }
 
 function CheckPermission({
   roles = [],
   AllowedContent,
   DisallowedContent,
+  LoadingContent,
 }: Props) {
   const { data, called, error, loading } = useQuery(getPermissions, {
     ssr: false,
     skip: !roles.length,
   })
 
-  if (!roles.length || !data) {
+  if (error) {
+    console.error('CheckPermission error:', error)
+
     return null
   }
 
-  if ((called && loading) || error) {
-    if (error !== undefined) {
-      console.error('CheckPermission error:', error)
-    }
+  if (called && loading) {
+    return LoadingContent ? (
+      <LoadingContent />
+    ) : (
+      <ExtensionPoint id="loading-content" />
+    )
+  }
 
+  if (!roles.length || !data) {
     return null
   }
 

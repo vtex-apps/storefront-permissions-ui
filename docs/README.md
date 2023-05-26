@@ -89,6 +89,7 @@ If you are experienced in developing and customizing your store’s theme, follo
     | `check-permission` | Checks if the current user has the required permissions to access the content wrapped with this block.<br>You can wrap content blocks with check-permission when declaring them to validate if the user has the required permissions to see that content. Example: `check-permission#carousel` |  |
     | `allowed-content` | Allows you to define on children blocks the content that will be shown for allowed users – users with roles that have the required permissions to view the block. |  |
     | `disallowed-content` | Optional block that allows you to define on children blocks the content that will be shown for disallowed users – users with roles that do not have the required permissions to view the block. |  |
+    | `loading-content` | Optional block that allows you to define a loading content while permissions are loading. |  |
     
 
     This component will check if the user has permission to see the `allowed-content`, otherwise they will see the `disallowed-content`.
@@ -119,7 +120,7 @@ In the example below, in a store’s home, a carousel with banners will only be 
 +    "props": {
 +      "roles": ["store-admin", "sales-admin"]
 +    },
-+    "blocks": ["allowed-content#carousel","disallowed-content#carousel"]
++    "blocks": ["allowed-content#carousel","disallowed-content#carousel", "loading-content#carousel"]
 +  },
 +  "allowed-content#carousel": {
 +    "children": ["carousel#home"]
@@ -127,9 +128,17 @@ In the example below, in a store’s home, a carousel with banners will only be 
 +  "disallowed-content#carousel": {
 +    "children": ["rich-text#disallowed"]
 +  },
++  "loading-content#carousel": {
++    "children": ["rich-text#loading"]
++  },
 +  "rich-text#disallowed": {
 +    "props": {
 +      "text": "**You don't have access to this content**"
++    }
++  },
++  "rich-text#loading": {
++    "props": {
++      "text": "Waiting for permissions..."
 +    }
 +  },
   "carousel#home": {
