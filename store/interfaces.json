@@ -1,4 +1,8 @@
 {
+  "check-organization-permission": {
+    "component": "CheckOrganizationPermission",
+    "allowed": ["allowed-content", "disallowed-content", "loading-content"]
+  },
   "check-permission": {
     "component": "CheckPermission",
     "allowed": ["allowed-content", "disallowed-content", "loading-content"]
