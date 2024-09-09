@@ -39,7 +39,7 @@ function CheckOrganizationPermission({
   )
 
   if (error) {
-    console.error('CheckOrganizationPermission error:', error)
+    console.error('CheckOrganizationPermission component error:', error)
 
     return null
   }

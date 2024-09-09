@@ -1,9 +1,0 @@
-query GetOrganizationStorefront($id: ID) {
-  getOrganizationByIdStorefront(id: $id)
-    @context(provider: "vtex.b2b-organizations-graphql") {
-    id
-    permissions {
-      createQuote
-    }
-  }
-}
