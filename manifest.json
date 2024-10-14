@@ -13,7 +13,9 @@
     "vtex.css-handles": "1.x",
     "vtex.styleguide": "9.x",
     "vtex.admin-customers-graphql": "3.x",
-    "vtex.storefront-permissions": "1.x"
+    "vtex.storefront-permissions": "1.x",
+    "vtex.b2b-organizations-graphql": "0.x",
+    "vtex.b2b-organizations": "1.x"
   },
   "builders": {
     "react": "3.x",
