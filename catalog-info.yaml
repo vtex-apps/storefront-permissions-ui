@@ -4,6 +4,7 @@ metadata:
   name: storefront-permissions-ui
   annotations:
     github.com/project-slug: vtex-apps/storefront-permissions-ui
+    vtex.com/application-id: O2EEZ3VC
 spec:
   system: b2b-suite
   type: frontend-ui
