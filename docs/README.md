@@ -27,7 +27,7 @@ Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers
 
 You can install the app by running `vtex install vtex.storefront-permissions-ui` in your terminal, using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
-After this command, the app will be installed in your VTEX Admin, and you can access it on **Account Settings** > **Storefront Permissions**.
+After this command, the app will be installed in your VTEX Admin, and you can access it on **Apps** > **Storefront Permissions**.
 
 > ℹ Installing **Storefront Permissions UI** has the effect of automatically installing the [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) app as a dependency, in case it is not already installed.
 
@@ -35,7 +35,7 @@ After this command, the app will be installed in your VTEX Admin, and you can ac
 
 To manage roles and their respective app permissions using the Storefront Permissions UI, follow the steps below after installing the app.
 
-1. At the VTEX Admin, navigate to **Account Settings** > **Storefront Permissions**.
+1. At the VTEX Admin, navigate to **Apps** > **Storefront Permissions**.
 2. Click on one of the [available storefront roles](#available-storefront-roles).
 3. Click on one of the listed apps.
 
@@ -44,7 +44,7 @@ To manage roles and their respective app permissions using the Storefront Permis
 4. Select which permissions you want to enable for the role, as illustrated below.
 5. Once you are done, click on `Save`.
 
-![storefront-permissions-ui](https://raw.githubusercontent.com/vtex-apps/storefront-permissions-ui/master/docs/images/storefront-permissions-ui.gif)
+![storefront-permissions-ui](https://raw.githubusercontent.com/vtex-apps/storefront-permissions-ui/master/docs/images/storefront-en.gif)
 
 After associating roles with the desired permissions, you may then assign roles to users. To learn more about this, read our [B2B Organizations documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#users).
 
