@@ -24,5 +24,13 @@
     "docs": "0.x",
     "store": "0.x"
   },
+  "policies": [
+    {
+      "name": "buyer_organization_view"
+    },
+    {
+      "name": "buyer_organization_edit"
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
