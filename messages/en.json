@@ -29,7 +29,7 @@
   "admin/storefront-permissions.help.category1": "Store Admin",
   "admin/storefront-permissions.help.category1.text1": "Full access",
   "admin/storefront-permissions.help.category2": "Sales",
-  "admin/storefront-permissions.help.category2.text1": "Can manage quotations, sales, and users from the its Organization.",
+  "admin/storefront-permissions.help.category2.text1": "Can manage quotations, sales, and users from its Organization.",
   "admin/storefront-permissions.help.category2.text2": "It can have different access levels.",
   "admin/storefront-permissions.help.category2.text3": "Can belong to one or many organizations.",
   "admin/storefront-permissions.help.category2.text4": "Sales users can only manage Sales roles.",
@@ -37,5 +37,5 @@
   "admin/storefront-permissions.help.category3": "Customers",
   "admin/storefront-permissions.help.category3.text1": "Have access and can manage its own organization.",
   "admin/storefront-permissions.help.category3.text2": "Customers users can only manage users under the Customers roles.",
-  "admin/storefront-permissions.help.category3.text3": "Customers users hierarchy: customer-amin > customer-approver > customer-buyer"
+  "admin/storefront-permissions.help.category3.text3": "Customers users hierarchy: customer-admin > customer-approver > customer-buyer"
 }
