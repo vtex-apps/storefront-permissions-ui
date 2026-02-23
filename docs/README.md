@@ -17,6 +17,7 @@ This app communicates with the backstage **Storefront Permissions** app and prov
 
 We recommend that you use it alongside the other apps in the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) for all functionalities to work as expected.
 
+> ⚠️ This specification applies to B2B Suite only.
 
 ## Before you start
 
